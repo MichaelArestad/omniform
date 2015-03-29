@@ -1,0 +1,26 @@
+// ==========================================================================
+// Main
+// ==========================================================================
+
+.of-editable {
+	margin: 5px;
+	padding: 30px;
+	outline: 0;
+
+	&:empty {
+		box-shadow: inset 0 0 0 1px #E9EFF3;
+		background: #fff;
+
+		&:before {
+			content: attr(data-placeholder);
+			color: #C8D7E1;
+		}
+	}
+	&:focus {
+		box-shadow: inset 0 0 0 2px #0085BE;
+		background: #fff;
+	}
+	&:not([data-placeholder]):empty:before {
+			content: attr(aria-label);
+	}
+}
